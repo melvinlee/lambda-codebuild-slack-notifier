@@ -1,0 +1,22 @@
+{
+  "name": "aws-lambda-codebuild-slack-notifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melvinlee/aws-lambda-codebuild-slack-notifier.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melvinlee/aws-lambda-codebuild-slack-notifier/issues"
+  },
+  "homepage": "https://github.com/melvinlee/aws-lambda-codebuild-slack-notifier#readme",
+  "dependencies": {
+    "request": "^2.85.0"
+  }
+}

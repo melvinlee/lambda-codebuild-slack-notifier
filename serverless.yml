@@ -1,0 +1,21 @@
+service: aws-codebuild-slack-notify
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+  stage: ${opt:stage, 'dev'}
+  region: ap-southeast-1
+  environment:
+      SLACK_URL: ${opt:slack_url, 'NOT-SET'}
+
+functions:
+  notify:
+    handler: index.handler
+    events:
+      - cloudwatchEvent:
+          event:
+            source:
+              - "aws.codebuild"
+            detail-type:
+              - "CodeBuild Build State Change"
