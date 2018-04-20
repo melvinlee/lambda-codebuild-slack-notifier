@@ -19,12 +19,12 @@ function generateRequestDetails(event, url) {
         throw new Error ("Unsupported detail type: " + event['detail-type']);
 
     let color;
-    let text = `CodeBuild: ${event.detail['project-name']}`;
+    let text = `CodeBuild: ${event.detail['project-name']} `;
     let codebuildStatus = event.detail['build-status'];
 
     if (codebuildStatus == 'STARTED' || codebuildStatus == 'IN_PROGRESS') {
         color = "#888888";
-        text += "has started."
+        text += "has *started*."
     }
     else if (codebuildStatus == 'SUCCEEDED') {
         color = "good";
