@@ -11,7 +11,7 @@ provider:
 
 functions:
   notify:
-    handler: index.handler
+    handler: handler.handler
     events:
       - cloudwatchEvent:
           event:
